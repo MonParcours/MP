@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kierunek Francja - Twoja Droga na Studia</title>
+    <style>
+        /* Base Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #002366; /* Deep French Navy */
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Top Bar - French Flag colors */
+        .top-bar {
+            height: 8px;
+            background: linear-gradient(to right, #002654 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ed2939 66.66%);
+        }
+
+        /* Logo Navigation Bar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar img {
+            max-height: 120px;
+            width: auto;
+            display: inline-block;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: #002366;
+            color: #ffffff;
+            padding: 60px 20px 80px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: #ffffff;
+            font-size: 2.6rem;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            line-height: 1.2;
+        }
+        
+        header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e0e6ed;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px auto; /* Overlap header slightly */
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        .section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 35, 102, 0.08);
+        }
+
+        .intro {
+            border-left: 5px solid #ed2939; /* French Red */
+            padding-left: 30px;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #ed2939;
+            margin: 15px auto 0 auto;
+        }
+
+        /* Cards / Grids */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #002366;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Pillars Layout */
+        .pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .pillar-card {
+            display: flex;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pillar-number {
+            background: #002366;
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 120px;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        .pillar-content {
+            padding: 30px;
+            flex: 1;
+        }
+        
+        .pillar-content h3 {
+            color: #ed2939;
+            margin-top: 0;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: #002366;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        .cta-section p {
+            color: #e0e6ed;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ed2939;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c81d2a;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #ffffff;
+            color: #002366;
+        }
+
+        /* Footer / Contact */
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .contact-box h3 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item a {
+            color: #90cdf4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: #bee3f8;
+        }
+
+        .contact-item svg {
+            flex-shrink: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section { padding: 30px 20px; }
+            header { padding: 40px 20px 60px 20px; }
+            header h1 { font-size: 2rem; }
+            .pillar-card { flex-direction: column; }
+            .pillar-number { padding: 15px; min-height: auto; }
+            .cta-buttons-container { flex-direction: column; gap: 15px; }
+            .navbar img { max-height: 90px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"></div>
+
+    <!-- Navigation Bar with Logo -->
+    <nav class="navbar">
+        <img src="Gemini_Generated_Image_cdtlhdcdtlhdcdtl.png" alt="École Mon Parcours Logo">
+    </nav>
+
+    <header>
+        <h1>Kierunek Francja: prestiżowe studia i styl życia, który pokochasz.</h1>
+        <p>Międzynarodowa edukacja i kariera oparta na solidnym fundamencie prestiżowej edukacji.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Intro Section -->
+        <section class="section intro">
+            <p><strong>Twoim celem jest międzynarodowa edukacja i kariera oparta na solidnym fundamencie prestiżowej edukacji? Chcesz zamieszkać w kraju, gdzie piękno i kultura są na wyciągnięcie ręki?</strong></p>
+            <p>Francja to nie tylko kolebka kultury, sztuki i dyplomacji europejskiej, ale także jedna z największych potęg gospodarczych i naukowych świata. Dla ambitnych młodych ludzi z Polski to idealne miejsce na rozwój, które otwiera drzwi do międzynarodowej kariery.</p>
+            <p>Wiadomo, że wyjazd za granicę może wzbudzać wiele niepokojących pytań: <em>Jak sobie poradzę z francuską biurokracją? Czy mój francuski jest wystarczająco dobry? Jak w ogóle odnajdę się w nieznanym mi otoczeniu i zaaklimatyzuję się w nowym miejscu?</em></p>
+            <p>Nasza agencja powstała po to, by usunąć wszystkie te obawy i bariery związane z rozpoczęciem edukacji w nowym kraju. Oferujemy pełen zakres usług "od A do Z" – począwszy od intensywnej nauki języka, poprzez profesjonalne przygotowanie dokumentów, a skończywszy na pomocy w adaptacji na miejscu. <strong>Z nami droga do francuskiej uczelni stanie się dla Ciebie prosta, bezpieczna i pozbawiona stresu.</strong></p>
+        </section>
+
+        <!-- Why France Section -->
+        <section class="section">
+            <h2 class="section-title">Dlaczego warto wybrać studia we Francji?</h2>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h3>1. Światowy poziom edukacji na wyciągnięcie ręki</h3>
+                    <p>System szkolnictwa wyższego we Francji jest znany na całym świecie. Bez względu na to czy wybierasz historyczne uniwersytety (jak Sorbona), elitarne Grandes Écoles czy prestiżowe uczelnie artystyczne i medyczne, otrzymujesz dyplom, który liczy się w każdym kraju.</p>
+                    <p>Państwo francuskie w znacznym stopniu finansuje studia wyższe (również dla cudzoziemców), dzięki czemu koszty są nieporównywalnie niższe niż w USA czy Wielkiej Brytanii.</p>
+                </div>
+
+                <div class="card">
+                    <h3>2. Unikalny system opieki socjalnej</h3>
+                    <p>Jako rezydent państwa członkowskiego UE, masz takie same prawa jak student francuski:</p>
+                    <ul>
+                        <li><strong>Dofinansowanie mieszkania (CAF):</strong> comiesięczne wsparcie wynajmu.</li>
+                        <li><strong>Bezpłatna opieka zdrowotna:</strong> wysoka jakość opieki (Puma / Sécurité Sociale) za darmo.</li>
+                        <li><strong>Duże ulgi studenckie:</strong> 50% i więcej zniżki na kolej (SNCF), komunikację oraz darmowe muzea (poniżej 26. roku życia).</li>
+                        <li><strong>Stołówki uniwersyteckie (Restos U):</strong> pełnowartościowy, gorący posiłek za kilka euro.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>3. Kultowa jakość życia i rozwój</h3>
+                    <p>Studia we Francji to jedyny w swoim rodzaju <em>Art de vivre</em>. Poranna kawa w centrum Paryża, spacery nad Sekwaną, pola Prowansji czy plaże Lazurowego Wybrzeża.</p>
+                    <p>Znajomość języka francuskiego – języka dyplomacji, mody, sztuki, <em>haute cuisine</em> i wielkiego biznesu – da Ci olbrzymią przewagę na rynku pracy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Help Section -->
+        <section class="section">
+            <h2 class="section-title">W jaki sposób pomagamy Ci go osiągnąć?</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Sama formalność zapisu na francuską uczelnię bywa skomplikowana. Nasz zespół ekspertów wesprze Cię w tym procesie łącząc następujące metody:</p>
+
+            <div class="pillars">
+                <div class="pillar-card">
+                    <div class="pillar-number">Filar 1</div>
+                    <div class="pillar-content">
+                        <h3>Przygotowanie językowe i kulturowe</h3>
+                        <p>Biegłość językowa od samego początku nie jest konieczna. Nasz program jest dostosowany do każdego poziomu zaawansowania:</p>
+                        <ul>
+                            <li><strong>Intensywne kursy języka francuskiego:</strong> (ogólnego i akademickiego) skupiające się na swowodzie komunikacji i przełamaniu bariery językowej. Przygotowanie do egzaminów (DELF/DALF).</li>
+                            <li><strong>Nauka metodologii akademickiej:</strong> pisanie eseju (<em>dissertation</em>), prezentacje i strukturyzacja wypowiedzi zgodnie z wymaganiami francuskich wykładowców.</li>
+                            <li><strong>Trening adaptacyjny:</strong> przybliżymy Ci francuską kulturę, styl życia i lokalne zwyczaje, byś od razu poczuł się jak u siebie.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">Filar 2</div>
+                    <div class="pillar-content">
+                        <h3>Kompleksowa obsługa (Zero Stresu)</h3>
+                        <p>Francuska biurokracja może być wyzwaniem. My zajmiemy się formalnościami, abyś mógł skupić się wyłącznie na nauce:</p>
+                        <ul>
+                            <li><strong>Indywidualny mentoring:</strong> pomoc w wyborze kierunku, uczelni lub Grande École.</li>
+                            <li><strong>Systemy rekrutacyjne:</strong> prowadzimy Cię krok po kroku przez Parcoursup lub Campus France.</li>
+                            <li><strong>Profesjonalne portfolio:</strong> pomoc w napisaniu listu motywacyjnego (<em>Projet de formation motivé</em>) oraz CV w języku francuskim.</li>
+                            <li><strong>Logistyka i zakwaterowanie:</strong> wnioski o akademiki (CROUS), szukanie pokoi, gwaranci mieszkaniowi (Visale), rejestracja w systemie ubezpieczeń i CAF.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Zainwestuj w najwyższą stopę zwrotu</h2>
+            <p>Czy wiesz, że francuskie koncerny należą do największych inwestorów zagranicznych w Polsce? Absolwenci francuskich uczelni są jednymi z najbardziej poszukiwanych i najlepiej opłacanych specjalistów na europejskim rynku pracy.</p>
+            <p style="margin-top: 20px; font-weight: bold;">Zrób pierwszy krok ku swojej przyszłości!</p>
+            <p>Nie pozwól, aby lęk przed nieznanym lub bariera językowa powstrzymały Cię przed spełnieniem marzeń.</p>
+            
+            <div class="cta-buttons-container">
+                <a href="mailto:monparcours@proton.me" class="cta-button">Napisz e-mail</a>
+                <a href="tel:+48668327210" class="cta-button secondary">Zadzwoń: +48 668 327 210</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer / Contact -->
+    <footer>
+        <div class="contact-box">
+            <h3>Skontaktuj się z nami</h3>
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:monparcours@proton.me">monparcours@proton.me</a>
+            </div>
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:+48668327210">+48 668 327 210</a>
+            </div>
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Puławska 405a, 02-801 Warszawa</span>
+            </div>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">Przeanalizujemy Twoje plany i wspólnie ułożymy plan Twojej edukacji i kariery we Francji.</p>
+    </footer>
+
+</body>
+</html>
